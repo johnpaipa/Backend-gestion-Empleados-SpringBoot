@@ -51,7 +51,7 @@ public class EmpleadoControlador {
 				.orElseThrow(()-> new ResourceNotFoundException("No existe el empleado con el ID: "+id));
 		empleado.setNombre(detallesEmpleado.getNombre());
 		empleado.setApellido(detallesEmpleado.getApellido());
-		empleado.setEmail(detallesEmpleado.getApellido());
+		empleado.setEmail(detallesEmpleado.getEmail());
 		
 		Empleado empleadoActualizado = repositorio.save(empleado);
 		return ResponseEntity.ok(empleadoActualizado);
